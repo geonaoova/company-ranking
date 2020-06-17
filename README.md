@@ -7,6 +7,12 @@ Projeto desafio Serasa para elaboração de software para calculo de score de em
 - [Node.js](https://nodejs.org/en/)
 - [Npm](https://www.npmjs.com/)
 
+### Navegadores homologados (últimas versões)
+
+- Google Chrome
+- Mozilla Firefox
+- Edge Chromium
+
 ## Instalação
 
 Para instalar o projeto, após clonar o projeto, navegue até a pasta `server` e execute os seguintes comandos:
