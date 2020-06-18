@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export default function AlertDialog({ isOpen, content }) {
+export default function AlertDialog({ setShowModal, isOpen, content }) {
   const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function AlertDialog({ isOpen, content }) {
   }, [isOpen])
 
   const handleClose = () => {
-    setOpen(false);
+    setShowModal(false);
   };
 
   return (

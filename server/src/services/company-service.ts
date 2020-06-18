@@ -25,7 +25,7 @@ class CompanyService {
   }
 
   calculateScore (company: Company, financialsData: Financial[]): number {
-    return financialsData
+    let score = financialsData
       .filter(financialData => financialData.companyId === company.id)
       .sort((f1, f2) => this.sortFinancialDataByType(f1, f2))
       .reduce((acumullator, financialData) => {
@@ -33,6 +33,14 @@ class CompanyService {
           ? Math.ceil(acumullator - acumullator * 0.04)
           : Math.trunc(acumullator + acumullator * 0.02)
       }, 50)
+
+    if (score > 100) {
+      score = 100
+    } else if (score < 1) {
+      score = 1
+    }
+
+    return score
   }
 
   sortFinancialDataByType (f1: Financial, f2: Financial): number {

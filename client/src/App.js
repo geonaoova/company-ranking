@@ -104,7 +104,7 @@ export default function App() {
 
   return (
     <>
-      <AlertDialog isOpen={modalIsOpen} content={modalContent}/>
+      <AlertDialog onCloseModal={setModalIsOpen} isOpen={modalIsOpen} content={modalContent}/>
       <Header />
       <Paper className={classes.root}>
         <GlobalStyle />
